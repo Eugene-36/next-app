@@ -2,7 +2,11 @@
 // next.config.mjs
 const nextConfig = {
 	images: {
-		domains: ['webcademy.ru'],
+		remotePatterns: [
+			{
+				hostname: 'webcademy.ru',
+			},
+		],
 	},
 };
 export default nextConfig;
