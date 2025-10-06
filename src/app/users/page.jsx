@@ -3,7 +3,7 @@ const fetchUsers = async () => {
 	try {
 		const response = await fetch(
 			'https://jsonplaceholder.typicode.com/users',
-			{ cache: 'no-store' },
+			{ revalidate: 60 }, // ISR - revalidate this data every 60 seconds
 		);
 		const data = await response.json();
 		return data;

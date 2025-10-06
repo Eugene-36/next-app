@@ -29,8 +29,8 @@ const AboutPage = () => {
 			<Image
 				src="https://webcademy.ru/blog/wp-content/uploads/2023/07/Travel-X-Cover-870x400.jpg"
 				alt="Image"
-				width={870}
-				height={400}
+				width={400}
+				height={200}
 				priority
 				unoptimized
 			/>
