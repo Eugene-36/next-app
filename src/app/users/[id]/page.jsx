@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 const getDetailedUserInfo = async (id) => {
 	const response = await fetch(
 		`https://jsonplaceholder.typicode.com/users/${id}`,
-		{ cache: 'no-store' },
+		{ revalidate: 60 },
 	);
 	if (response.status === 404) notFound();
 	const data = await response.json();
